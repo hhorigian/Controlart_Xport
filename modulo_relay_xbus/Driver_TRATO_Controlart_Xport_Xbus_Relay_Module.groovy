@@ -217,7 +217,7 @@ def initialize() {
     }
     
         //pauseExecution(200)
-        //getstatus()
+       getstatus()
        runIn(10, "refresh");
     
 }
@@ -250,7 +250,7 @@ def createchilds() {
 def getstatus()
 {
     //getmac()
-    pauseExecution(500)
+    pauseExecution(100)
     def msg = "mdcmd_getmd," + state.newmacdec
     logTrace('Sent getstatus()')
     sendCommand(msg)
@@ -273,7 +273,7 @@ def getmac(){
 
 
 def refresh() {
-    def msg = "mdcmd_getmd," + state.macaddress
+    def msg = "mdcmd_getmd," + state.newmacdec
     logTrace('Sent refresh()')   
     sendCommand(msg)
 }
@@ -530,7 +530,7 @@ def on()
     logDebug("Master Power ON()")
     def msg = "mdcmd_setallonmd," + state.macaddress + "\r\n"
     //sendCommand(msg)
-    pauseexecution(700)
+    pauseexecution(300)
     getstatus()
     
 }
@@ -541,7 +541,7 @@ def off()
     logDebug("Master Power OFF()")
     def msg = "mdcmd_setmasteroffmd," + state.macaddress + "\r\n"
     //sendCommand(msg)
-    pauseexecution(700)
+    pauseexecution(300)
     getstatus()
     
 }
@@ -592,7 +592,7 @@ def componentOn(cd){
 	if (logEnable) log.info "received on request from ${cd.displayName}"
     getChildDevice(cd.deviceNetworkId).parse([[name:"switch", value:"on", descriptionText:"${cd.displayName} was turned on"]])       
     on(cd)  
-    pauseExecution(300)
+    pauseExecution(100)
     //getstatus()
     
 }
@@ -601,7 +601,7 @@ void componentOff(cd){
 	if (logEnable) log.info "received off request from ${cd.displayName}"
     getChildDevice(cd.deviceNetworkId).parse([[name:"switch", value:"off", descriptionText:"${cd.displayName} was turned off"]])    
 	off(cd)
-    pauseExecution(300)
+    pauseExecution(100)
     //getstatus()
 
 }
