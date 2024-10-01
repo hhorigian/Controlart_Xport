@@ -1,5 +1,5 @@
 /**
- *  Hubitat - CA Driver - XPort - Dimmer Module - by TRATO
+ *  Hubitat - CA Driver - XPort - Dimmer Module - by VH
  *
  *  Copyright 2024 VH
  *
