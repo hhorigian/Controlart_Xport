@@ -1,5 +1,5 @@
 /**
- *  Hubitat - CA Driver - XPort - Relay Module - by TRATO
+ *  Hubitat - CA Driver - XPort - Relay Module - by VH
  *
  *  Copyright 2024 VH
  *
@@ -16,7 +16,7 @@
 
  */
 metadata {
-  definition (name: "Controlart - Xport - Xbus Relay Module", namespace: "TRATO", author: "TRATO", vid: "generic-contact") { 
+  definition (name: "Controlart - Xport - Xbus Relay Module", namespace: "VH", author: "VH", vid: "generic-contact") { 
         capability "Configuration"
         capability "Initialize" 
         capability "Refresh"
