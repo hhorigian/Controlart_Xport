@@ -16,7 +16,7 @@
 
  */
 metadata {
-  definition (name: "Controlart - Xport - Xbus DIMMER Module", namespace: "TRATO", author: "TRATO", vid: "generic-contact") { 
+  definition (name: "Controlart - Xport - Xbus DIMMER Module", namespace: "VH", author: "VH", vid: "generic-contact") { 
         capability "Configuration"
         capability "Initialize" 
         capability "Refresh"
