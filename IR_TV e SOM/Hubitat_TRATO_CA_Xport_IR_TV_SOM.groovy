@@ -18,7 +18,7 @@
  *
  */
 metadata {
-  definition (name: "ControlArt - Xport - IR para TV e SOM", namespace: "TRATO", author: "VH", vid: "generic-contact") {
+  definition (name: "ControlArt - Xport - IR para TV e SOM", namespace: "VH", author: "VH", vid: "generic-contact") {
     capability "Switch"  
     capability "Actuator"
     capability "TV"  
