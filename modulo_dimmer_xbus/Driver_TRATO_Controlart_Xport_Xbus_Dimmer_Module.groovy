@@ -13,6 +13,8 @@
  *  for the specific language governing permissions and limitations under the License.
  *
  *        1.0 09/8/2024  - V.BETA 1 
+ *        1.1 18/3/2025  - Fix ON Value to 255 when ON Dimmer 100%. 
+
 
  */
 metadata {
@@ -600,7 +602,7 @@ int relay = 0
 
  ////
      def stringrelay = relay
-     def comando = "mdcmd_sendmd," + state.newmacdec + "," + stringrelay + ",1\r\n"
+     def comando = "mdcmd_sendmd," + state.newmacdec + "," + stringrelay + ",255\r\n"
      interfaces.rawSocket.sendMessage(comando)
      log.info "Foi Ligado o Relay " + relay + " via TCP " + comando 
      sendEvent(name: "power", value: "on")
@@ -761,4 +763,3 @@ void logWarn(String msg, boolean force = false) {
 void logError(String msg) {
     log.error "${drvThis}: ${msg}"
 }
-
